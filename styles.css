@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Josefin Sans";
+  font-weight: 300;
+  src: local("JosefinSans-Light"),
+    url("./assets/fonts/josefin-sans-v32-latin-300.woff2"),
+    url("/assets/fonts/josefin-sans-v32-latin-300.woff");
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  font-weight: 400;
+  src: local("JosefinSans-Regular"),
+    url("/assets/fonts/josefin-sans-v32-latin-regular.woff2"),
+    url("/assets/fonts/josefin-sans-v32-latin-regular.woff");
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  font-weight: 600;
+  src: local("JosefinSans-SemiBold"),
+    url("./assets/fonts/josefin-sans-v32-latin-600.woff2"),
+    url("./assets/fonts/josefin-sans-v32-latin-600.woff");
+}
