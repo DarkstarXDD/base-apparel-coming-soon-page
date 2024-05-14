@@ -21,3 +21,171 @@
     url("./assets/fonts/josefin-sans-v32-latin-600.woff2"),
     url("./assets/fonts/josefin-sans-v32-latin-600.woff");
 }
+
+/* --------------- CSS Reset --------------- */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*:focus-visible {
+  outline: 0.125rem dotted var(--clr-primary-700);
+  outline-offset: 0.125rem;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+/* --------------- CSS Variables --------------- */
+:root {
+  --clr-primary-700: #ce9898;
+  --clr-primary-900: #423a3a;
+
+  --clr-secondary-600: #f96464; /* Error state */
+
+  --clr-neutral-700: rgba(206, 152, 152, 0.5); /* Input border & placeholder */
+
+  --ff-josefin-sans: "Josefin Sans", sans-serif;
+
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-semibold: 600;
+
+  --fs-100: 0.8125rem;
+  --fs-400: 0.875rem;
+  --fs-900: 2.5rem;
+}
+
+/* --------------- Utility Classes --------------- */
+.grid {
+  display: grid;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+/* --------------- End of Utility Classes --------------- */
+
+body {
+  min-height: 100vh;
+  font-family: var(--ff-josefin-sans);
+  font-size: var(--fs-400);
+  font-weight: var(--fw-regular);
+  background: linear-gradient(#ffffff, #fff4f4);
+  /* background-image: url("assets/images/bg-pattern-desktop.svg");
+  background-size: cover; */
+}
+
+.header {
+  width: 100%;
+  padding: 2rem;
+  max-width: 23.5rem;
+}
+
+.logo-img {
+  width: 6.25rem;
+}
+
+.main {
+  max-width: 23.5rem;
+  gap: 4rem;
+}
+
+.content-wrapper {
+  gap: 1rem;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.title {
+  font-size: var(--fs-900);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.678rem;
+  line-height: 1.05;
+  text-transform: uppercase;
+  color: var(--clr-primary-900);
+}
+
+.title-selection {
+  font-weight: var(--fw-light);
+  color: var(--clr-primary-700);
+}
+
+.text {
+  line-height: 1.57;
+  color: var(--clr-primary-700);
+}
+
+.input-wrapper {
+  width: 100%;
+  /* background-color: red; */
+  grid-template-columns: 1fr auto;
+  border: 0.0625rem solid var(--clr-neutral-700);
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+.input-wrapper:focus-within {
+  outline: 0.125rem dotted green;
+  outline-offset: 0.125rem;
+}
+
+.input-wrapper:has(input[aria-invalid="true"]) {
+  outline: 0.125rem dotted red;
+  outline-offset: 0.125rem;
+}
+
+.input-email {
+  color: var(--clr-primary-900);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0 1.25rem;
+}
+
+.input-email::placeholder {
+  color: var(--clr-neutral-700);
+}
+
+.btn-submit {
+  width: 4rem;
+  height: 3rem;
+  background-image: linear-gradient(90deg, #f8bfbf, #ee8b8b);
+  border: none;
+  border-radius: 28px;
+}
+
+/* --------------- Media Queries --------------- */
+@media (min-width: 48rem) {
+  :root {
+    --fs-400: 1rem;
+    --fs-900: 4rem;
+  }
+}
