@@ -35,7 +35,8 @@
 }
 
 img,
-svg {
+svg,
+picture {
   display: block;
   max-width: 100%;
   height: auto;
@@ -118,10 +119,16 @@ button {
 
 .main {
   max-width: 23.5rem;
-  gap: 1rem;
-  text-align: center;
+  /* gap: 1rem; */
+  /* text-align: center; */
   padding: 0 2rem;
   margin-top: 4rem;
+}
+
+.content-wrapper {
+  max-width: 440px;
+  gap: 1rem;
+  text-align: center;
 }
 
 .title {
@@ -190,11 +197,15 @@ button {
   }
 
   .body {
-    grid-template-columns: minmax(auto, 830px) minmax(auto, 610px);
+    grid-template-columns: minmax(auto, 51.875rem) minmax(auto, 38.125rem);
+    /* grid-template-columns: minmax(auto, 1fr) auto; */
+    /* grid-template-columns: 1fr auto; */
+    /* grid-template-columns: 1fr 1fr; */
+    grid-template-rows: auto 1fr;
   }
 
   .header {
-    padding: 4rem 164px;
+    padding: 4rem 10.25rem;
   }
 
   .logo-img {
@@ -208,13 +219,27 @@ button {
 
   .main {
     max-width: 100%;
+    /* text-align: left; */
+    /* align-items: flex-start; */
+    margin-top: 4.4rem;
+    /* padding: 0 13.75rem 0 10.25rem; */
+    padding: 0 10.25rem;
+    /* gap: 1.2rem; */
+  }
+
+  .content-wrapper {
+    max-width: 440px;
     text-align: left;
     align-items: flex-start;
-    margin-top: 0;
-    padding: 0 164px;
+    gap: 1.2rem;
   }
 
   .title {
+    line-height: 1.08;
     letter-spacing: 1.0825rem;
+  }
+
+  .text {
+    line-height: 1.75;
   }
 }

@@ -38,7 +38,7 @@
     <title>Base Apparel - Coming Soon</title>
   </head>
 
-  <body class="body grid">
+  <body class="body">
     <header class="header">
       <img src="assets/images/logo.svg" alt="base apparel" class="logo-img" />
     </header>
@@ -54,33 +54,35 @@
         />
       </picture>
     </aside>
-    <main class="main flex-column">
-      <h1 class="title">
-        <span class="title-selection">We're</span> coming soon
-      </h1>
-      <p class="text">
-        Hello fellow shoppers! We're currently building our new fashion store.
-        Add your email below to stay up-to-date with announcements and our
-        launch deals.
-      </p>
-      <form novalidate action="#" class="form">
-        <label for="input-email" class="visually-hidden">Email</label>
-        <div class="input-wrapper grid">
-          <input
-            type="email"
-            name="email"
-            placeholder="Email Address"
-            id="input-email"
-            class="input-email"
-            aria-describedby="error"
-            autocomplete="email"
-          />
-          <button class="btn-submit flex-row">
-            <img src="assets/images/icon-arrow.svg" alt="" />
-          </button>
-        </div>
-        <div id="error" class="error" aria-live="assertive"></div>
-      </form>
+    <main class="main">
+      <div class="content-wrapper flex-column">
+        <h1 class="title">
+          <span class="title-selection">We're</span> coming soon
+        </h1>
+        <p class="text">
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our
+          launch deals.
+        </p>
+        <form novalidate action="#" class="form">
+          <label for="input-email" class="visually-hidden">Email</label>
+          <div class="input-wrapper grid">
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              id="input-email"
+              class="input-email"
+              aria-describedby="error"
+              autocomplete="email"
+            />
+            <button class="btn-submit flex-row">
+              <img src="assets/images/icon-arrow.svg" alt="" />
+            </button>
+          </div>
+          <div id="error" class="error" aria-live="assertive"></div>
+        </form>
+      </div>
     </main>
   </body>
 </html>
