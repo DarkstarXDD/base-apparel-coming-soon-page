@@ -69,6 +69,7 @@ button {
 /* --------------- Utility Classes --------------- */
 .grid {
   display: grid;
+  justify-content: center;
 }
 
 .flex-row {
@@ -93,35 +94,34 @@ button {
 }
 /* --------------- End of Utility Classes --------------- */
 
-body {
+.body {
   min-height: 100vh;
+  display: grid;
+  justify-content: center;
+  grid-auto-rows: max-content;
+
   font-family: var(--ff-josefin-sans);
   font-size: var(--fs-400);
   font-weight: var(--fw-regular);
   background: linear-gradient(#ffffff, #fff4f4);
-  /* background-image: url("assets/images/bg-pattern-desktop.svg");
-  background-size: cover; */
 }
 
 .header {
   width: 100%;
-  padding: 2rem;
   max-width: 23.5rem;
+  padding: 2rem;
 }
 
 .logo-img {
-  width: 6.25rem;
+  max-width: 6.25rem;
 }
 
 .main {
   max-width: 23.5rem;
-  gap: 4rem;
-}
-
-.content-wrapper {
   gap: 1rem;
   text-align: center;
   padding: 0 2rem;
+  margin-top: 4rem;
 }
 
 .title {
@@ -187,5 +187,34 @@ body {
   :root {
     --fs-400: 1rem;
     --fs-900: 4rem;
+  }
+
+  .body {
+    grid-template-columns: minmax(auto, 830px) minmax(auto, 610px);
+  }
+
+  .header {
+    padding: 4rem 164px;
+  }
+
+  .logo-img {
+    max-width: 9.875rem;
+  }
+
+  .aside {
+    grid-column: 2;
+    grid-row: span 2;
+  }
+
+  .main {
+    max-width: 100%;
+    text-align: left;
+    align-items: flex-start;
+    margin-top: 0;
+    padding: 0 164px;
+  }
+
+  .title {
+    letter-spacing: 1.0825rem;
   }
 }

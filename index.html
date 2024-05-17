@@ -38,45 +38,49 @@
     <title>Base Apparel - Coming Soon</title>
   </head>
 
-  <body class="flex-column">
+  <body class="body grid">
     <header class="header">
       <img src="assets/images/logo.svg" alt="base apparel" class="logo-img" />
     </header>
-
+    <aside class="aside">
+      <picture>
+        <source
+          media="(min-width: 48rem)"
+          srcset="./assets/images/hero-desktop.jpg"
+        />
+        <img
+          src="./assets/images/hero-mobile.jpg"
+          alt="three-people-in-a-office"
+        />
+      </picture>
+    </aside>
     <main class="main flex-column">
-      <img
-        src="assets/images/hero-mobile.jpg"
-        alt="women wearing an orange color shirt looking at the camera"
-        class="hero-img"
-      />
-      <div class="content-wrapper flex-column">
-        <h1 class="title">
-          <span class="title-selection">We're</span> coming soon
-        </h1>
-        <p class="text">
-          Hello fellow shoppers! We're currently building our new fashion store.
-          Add your email below to stay up-to-date with announcements and our
-          launch deals.
-        </p>
-        <form novalidate action="#" class="form">
-          <label for="input-email" class="visually-hidden">Email</label>
-          <div class="input-wrapper grid">
-            <input
-              type="email"
-              name="email"
-              placeholder="Email Address"
-              id="input-email"
-              class="input-email"
-              aria-describedby="error"
-              autocomplete="email"
-            />
-            <button class="btn-submit flex-row">
-              <img src="assets/images/icon-arrow.svg" alt="" />
-            </button>
-          </div>
-          <div id="error" class="error" aria-live="assertive"></div>
-        </form>
-      </div>
+      <h1 class="title">
+        <span class="title-selection">We're</span> coming soon
+      </h1>
+      <p class="text">
+        Hello fellow shoppers! We're currently building our new fashion store.
+        Add your email below to stay up-to-date with announcements and our
+        launch deals.
+      </p>
+      <form novalidate action="#" class="form">
+        <label for="input-email" class="visually-hidden">Email</label>
+        <div class="input-wrapper grid">
+          <input
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            id="input-email"
+            class="input-email"
+            aria-describedby="error"
+            autocomplete="email"
+          />
+          <button class="btn-submit flex-row">
+            <img src="assets/images/icon-arrow.svg" alt="" />
+          </button>
+        </div>
+        <div id="error" class="error" aria-live="assertive"></div>
+      </form>
     </main>
   </body>
 </html>
