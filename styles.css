@@ -53,7 +53,6 @@ button {
   --clr-primary-900: #423a3a;
 
   --clr-secondary-600: #f96464; /* Error state */
-
   --clr-neutral-700: rgba(206, 152, 152, 0.5); /* Input border & placeholder */
 
   --ff-josefin-sans: "Josefin Sans", sans-serif;
@@ -68,17 +67,6 @@ button {
 }
 
 /* --------------- Utility Classes --------------- */
-.grid {
-  display: grid;
-  justify-content: center;
-}
-
-.flex-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .flex-column {
   display: flex;
   flex-direction: column;
@@ -108,25 +96,32 @@ button {
 }
 
 .header {
-  width: 100%;
-  max-width: 23.5rem;
   padding: 2rem;
 }
 
 .logo-img {
-  max-width: 6.25rem;
+  width: 6.25rem;
+  height: 1.3125rem;
+}
+
+.picture {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .main {
   max-width: 23.5rem;
-  /* gap: 1rem; */
-  /* text-align: center; */
   padding: 0 2rem;
   margin-top: 4rem;
 }
 
 .content-wrapper {
-  max-width: 440px;
   gap: 1rem;
   text-align: center;
 }
@@ -150,13 +145,16 @@ button {
   color: var(--clr-primary-700);
 }
 
-.input-wrapper {
+.form {
   width: 100%;
-  /* background-color: red; */
+}
+
+.input-wrapper {
+  display: grid;
   grid-template-columns: 1fr auto;
   border: 0.0625rem solid var(--clr-neutral-700);
   border-radius: 28px;
-  overflow: hidden;
+  margin-top: 1rem;
 }
 
 .input-wrapper:focus-within {
@@ -165,8 +163,8 @@ button {
 }
 
 .input-wrapper:has(input[aria-invalid="true"]) {
-  outline: 0.125rem dotted red;
-  outline-offset: 0.125rem;
+  border-color: var(--clr-secondary-600);
+  outline-color: var(--clr-secondary-600);
 }
 
 .input-email {
@@ -184,6 +182,7 @@ button {
 .btn-submit {
   width: 4rem;
   height: 3rem;
+  justify-content: center;
   background-image: linear-gradient(90deg, #f8bfbf, #ee8b8b);
   border: none;
   border-radius: 28px;
@@ -197,19 +196,17 @@ button {
   }
 
   .body {
-    grid-template-columns: minmax(auto, 51.875rem) minmax(auto, 38.125rem);
-    /* grid-template-columns: minmax(auto, 1fr) auto; */
-    /* grid-template-columns: 1fr auto; */
-    /* grid-template-columns: 1fr 1fr; */
+    grid-template-columns: 4fr 3fr;
     grid-template-rows: auto 1fr;
   }
 
   .header {
-    padding: 4rem 10.25rem;
+    padding: 4rem clamp(2rem, 11.38vw, 10.25rem);
   }
 
   .logo-img {
-    max-width: 9.875rem;
+    width: 9.875rem;
+    height: 2rem;
   }
 
   .aside {
@@ -219,18 +216,13 @@ button {
 
   .main {
     max-width: 100%;
-    /* text-align: left; */
-    /* align-items: flex-start; */
     margin-top: 4.4rem;
-    /* padding: 0 13.75rem 0 10.25rem; */
-    padding: 0 10.25rem;
-    /* gap: 1.2rem; */
+    padding: 0 clamp(2rem, 11.38vw, 10.25rem);
   }
 
   .content-wrapper {
-    max-width: 440px;
+    max-width: 27.5rem;
     text-align: left;
-    align-items: flex-start;
     gap: 1.2rem;
   }
 
@@ -241,5 +233,18 @@ button {
 
   .text {
     line-height: 1.75;
+  }
+
+  .input-wrapper {
+    margin-top: 1.4rem;
+  }
+
+  .input-email {
+    padding: 1rem 2rem;
+  }
+
+  .btn-submit {
+    width: 6.25rem;
+    height: 3.3rem;
   }
 }

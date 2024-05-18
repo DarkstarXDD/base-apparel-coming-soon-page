@@ -40,20 +40,30 @@
 
   <body class="body">
     <header class="header">
-      <img src="assets/images/logo.svg" alt="base apparel" class="logo-img" />
+      <img
+        src="assets/images/logo.svg"
+        alt="base apparel"
+        class="logo-img"
+        width="158"
+        height="33"
+      />
     </header>
+
     <aside class="aside">
-      <picture>
+      <picture class="picture">
         <source
           media="(min-width: 48rem)"
           srcset="./assets/images/hero-desktop.jpg"
+          class="hero-img"
         />
         <img
           src="./assets/images/hero-mobile.jpg"
-          alt="three-people-in-a-office"
+          alt="women wearing an orange color shirt looking at the camera"
+          class="hero-img"
         />
       </picture>
     </aside>
+
     <main class="main">
       <div class="content-wrapper flex-column">
         <h1 class="title">
@@ -66,7 +76,7 @@
         </p>
         <form novalidate action="#" class="form">
           <label for="input-email" class="visually-hidden">Email</label>
-          <div class="input-wrapper grid">
+          <div class="input-wrapper">
             <input
               type="email"
               name="email"
@@ -76,7 +86,7 @@
               aria-describedby="error"
               autocomplete="email"
             />
-            <button class="btn-submit flex-row">
+            <button class="btn-submit flex-column">
               <img src="assets/images/icon-arrow.svg" alt="" />
             </button>
           </div>
