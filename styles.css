@@ -189,7 +189,7 @@ button {
 }
 
 /* --------------- Media Queries --------------- */
-@media (min-width: 48rem) {
+@media (min-width: 64rem) {
   :root {
     --fs-400: 1rem;
     --fs-900: 4rem;
