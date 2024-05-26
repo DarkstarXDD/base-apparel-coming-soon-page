@@ -5,6 +5,7 @@ let errorMessage = ""
 const formEl = document.querySelector(".form")
 const emailInputEl = document.querySelector(".input-email")
 const errorEl = document.querySelector(".error")
+const errorIconEl = document.querySelector(".error-icon")
 
 const formSchema = z.object({
   email: z.string().email({ message: "Please provide a valid email" }),
@@ -12,6 +13,7 @@ const formSchema = z.object({
 
 const addErrorState = () => {
   emailInputEl.setAttribute("aria-invalid", true)
+  errorIconEl.classList.add("show-icon")
 }
 
 const removeErrorState = () => {
@@ -19,6 +21,7 @@ const removeErrorState = () => {
   emailInputEl.value = ""
   emailInputEl.blur()
   errorMessage = ""
+  errorIconEl.classList.remove("show-icon")
 }
 
 formEl.addEventListener("submit", (event) => {
@@ -33,7 +36,6 @@ formEl.addEventListener("submit", (event) => {
   if (!validationResult.success) {
     const validationResultFormatted = validationResult.error.format()
     errorMessage = validationResultFormatted.email?._errors.join(", ")
-    console.log(errorMessage)
     addErrorState()
   } else {
     removeErrorState()
