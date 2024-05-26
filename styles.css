@@ -157,14 +157,22 @@ button {
   margin-top: 1rem;
 }
 
-.input-wrapper:focus-within {
+/* If the input is focused */
+.input-wrapper:has(.input-email:focus) {
   outline: 0.125rem dotted green;
   outline-offset: 0.125rem;
 }
 
-.input-wrapper:has(input[aria-invalid="true"]) {
+/* If the input is invalid, but not focused */
+.input-wrapper:has(.input-email[aria-invalid="true"]) {
   border-color: var(--clr-secondary-600);
-  outline-color: var(--clr-secondary-600);
+}
+
+/* If the input is invalid and also focused */
+.input-wrapper:has(.input-email[aria-invalid="true"]:focus) {
+  border-color: var(--clr-secondary-600);
+  outline: 0.125rem dotted var(--clr-secondary-600);
+  outline-offset: 0.125rem;
 }
 
 .input-email {
