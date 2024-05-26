@@ -188,6 +188,19 @@ button {
   border-radius: 28px;
 }
 
+.btn-submit:hover {
+  cursor: pointer;
+  background-image: linear-gradient(90deg, #f6d2d2, #f8bfbf);
+}
+
+.error {
+  font-size: var(--fs-100);
+  text-align: left;
+  color: var(--clr-secondary-600);
+  margin-top: 0.5rem;
+  padding-left: 1.25rem;
+}
+
 /* --------------- Media Queries --------------- */
 @media (min-width: 64rem) {
   :root {
@@ -246,5 +259,10 @@ button {
   .btn-submit {
     width: 6.25rem;
     height: 3.3rem;
+  }
+
+  .error {
+    margin-top: 0.5rem;
+    padding-left: 2rem;
   }
 }
