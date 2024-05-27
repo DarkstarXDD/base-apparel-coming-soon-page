@@ -151,7 +151,6 @@ button {
 
 .input-wrapper {
   display: grid;
-  /* grid-template-columns: 1fr auto; */
   grid-template-columns: 1fr 1.5rem auto;
   gap: 0 0.5rem;
   border: 0.0625rem solid var(--clr-neutral-700);
