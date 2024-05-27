@@ -63,7 +63,7 @@ button {
 
   --fs-100: 0.8125rem;
   --fs-400: 0.875rem;
-  --fs-900: 2.5rem;
+  --fs-900: 1.5rem;
 }
 
 /* --------------- Utility Classes --------------- */
@@ -117,7 +117,7 @@ button {
 
 .main {
   max-width: 23.5rem;
-  padding: 0 2rem;
+  padding: 0 2rem 2rem 2rem;
   margin-top: 4rem;
 }
 
@@ -177,6 +177,7 @@ button {
 }
 
 .input-email {
+  min-width: 0;
   color: var(--clr-primary-900);
   background-color: transparent;
   border: none;
@@ -223,6 +224,12 @@ button {
 }
 
 /* --------------- Media Queries --------------- */
+@media (min-width: 20rem) {
+  :root {
+    --fs-900: 2.5rem;
+  }
+}
+
 @media (min-width: 64rem) {
   :root {
     --fs-400: 1rem;
