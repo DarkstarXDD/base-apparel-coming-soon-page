@@ -2,7 +2,7 @@
   font-family: "Josefin Sans";
   font-weight: 300;
   src: local("JosefinSans-Light"),
-    url("./assets/fonts/josefin-sans-v32-latin-300.woff2"),
+    url("/assets/fonts/josefin-sans-v32-latin-300.woff2"),
     url("/assets/fonts/josefin-sans-v32-latin-300.woff");
 }
 
@@ -18,8 +18,8 @@
   font-family: "Josefin Sans";
   font-weight: 600;
   src: local("JosefinSans-SemiBold"),
-    url("./assets/fonts/josefin-sans-v32-latin-600.woff2"),
-    url("./assets/fonts/josefin-sans-v32-latin-600.woff");
+    url("/assets/fonts/josefin-sans-v32-latin-600.woff2"),
+    url("/assets/fonts/josefin-sans-v32-latin-600.woff");
 }
 
 /* --------------- CSS Reset --------------- */
@@ -201,6 +201,11 @@ button {
 .btn-submit:hover {
   cursor: pointer;
   background-image: linear-gradient(90deg, #f6d2d2, #f8bfbf);
+}
+
+.arrow-icon {
+  width: 0.75rem;
+  height: 1.25rem;
 }
 
 .error {
